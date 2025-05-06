@@ -1,0 +1,92 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0a1a1;
+  }
+  
+  .login-card {
+    display: flex;
+    background-color: #f5b2b2;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    width: 800px;
+    overflow: hidden;
+  }
+  
+  .login-left, .login-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8a0d0d;
+  }
+  
+  .login-subtitle {
+    color: #8a0d0d;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .form-control {
+    padding-left: 35px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .login-btn {
+    background-color: #8a0d0d;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .register-btn{
+    background-color: #8a0d0d;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .login-right {
+    text-align: center;
+    background-color: #f5b2b2;
+  }
+  
+  .logo {
+    width: 100px;
+    margin: 0 auto 10px;
+  }
+  
+  .brand-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+  }
+  
