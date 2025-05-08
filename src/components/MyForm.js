@@ -1,50 +1,95 @@
 import React from "react";
-// import "./App.css";
-// import logo from '../pic1.png';
+import { useNavigate } from "react-router-dom"; // Make sure you have react-router-dom installed
 
-function Myform() {
+function MyForm() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Add any logout logic (e.g., clearing session)
+    navigate("/"); // Redirect to login page
+  };
+
   return (
-    <div style={styles.pageContainer}>
-      <header style={styles.header}>
-        <h1 style={styles.logo}>EcoFood Canteen</h1>
-        <nav style={styles.navbar}>
-          <a href="#home" style={styles.navItem}>Home</a>
-          <a href="#menu" style={styles.navItem}>Menu</a>
-          <a href="#about" style={styles.navItem}>About</a>
-          <a href="#contact" style={styles.navItem}>Contact</a>
-        </nav>
-      </header>
+    <div style={styles.wrapper}>
+      {/* Sidebar */}
+      <div style={styles.sidebar}>
+      <img
+        src={require("../pic1.png")}
+        alt="EcoFood Logo"
+        style={{ width: "120px", marginBottom: "20px" }}
+      />
+       <h2 style={{ marginBottom: "20px" }}>Dashboard</h2>
+        <button onClick={handleLogout} style={styles.logoutButton}>
+          Logout
+        </button>
+      </div>
 
-      <section style={styles.heroSection}>
-        <div style={styles.heroText}>
-          <h2>Welcome to EcoFood Canteen</h2>
-          <p>Healthy. Fresh. Sustainable.</p>
-        </div>
-        <img
-          src={require("../pic1.png")}
-          alt="EcoFood"
-          style={styles.heroImage}
-        />
-      </section>
+      {/* Main Content */}
+      <div style={styles.pageContainer}>
+        <header style={styles.header}>
+          <h1 style={styles.logo}>EcoFood Canteen</h1>
+          <nav style={styles.navbar}>
+            <a href="#home" style={styles.navItem}>Home</a>
+            <a href="#menu" style={styles.navItem}>Menu</a>
+            <a href="#about" style={styles.navItem}>About</a>
+            <a href="#contact" style={styles.navItem}>Contact</a>
+          </nav>
+        </header>
 
-      <section id="menu" style={styles.menuSection}>
-        <h2>Our Menu</h2>
-        <div style={styles.menuItems}>
-          <div style={styles.menuCard}>Veg Sandwich</div>
-          <div style={styles.menuCard}>Fruit Salad</div>
-          <div style={styles.menuCard}>Organic Juice</div>
-        </div>
-      </section>
+        <section style={styles.heroSection}>
+          <div style={styles.heroText}>
+            <h2>Welcome to EcoFood Canteen</h2>
+            <p>Healthy. Fresh. Sustainable.</p>
+          </div>
+          <img
+            src={require("../pic1.png")}
+            alt="EcoFood"
+            style={styles.heroImage}
+          />
+        </section>
 
-      <footer style={styles.footer}>
-        <p>&copy; 2025 EcoFood Canteen. All rights reserved.</p>
-      </footer>
+        <section id="menu" style={styles.menuSection}>
+          <h2>Our Menu</h2>
+          <div style={styles.menuItems}>
+            <div style={styles.menuCard}>Veg Sandwich</div>
+            <div style={styles.menuCard}>Fruit Salad</div>
+            <div style={styles.menuCard}>Organic Juice</div>
+          </div>
+        </section>
+
+        <footer style={styles.footer}>
+          <p>&copy; 2025 EcoFood Canteen. All rights reserved.</p>
+        </footer>
+      </div>
     </div>
   );
 }
 
 const styles = {
+  wrapper: {
+    display: "flex",
+    minHeight: "100vh",
+  },
+  sidebar: {
+    width: "220px",
+    backgroundColor: "#7b0000",
+    color: "white",
+    padding: "30px 20px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
+  logoutButton: {
+    marginTop: "auto",
+    padding: "10px",
+    backgroundColor: "#ff4d4d",
+    color: "white",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+  },
   pageContainer: {
+    flex: 1,
     fontFamily: "Arial, sans-serif",
     backgroundColor: "#fff5f5",
   },
@@ -108,4 +153,4 @@ const styles = {
   },
 };
 
-export default Myform;
+export default MyForm;
