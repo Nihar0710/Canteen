@@ -14,7 +14,7 @@ const Log = () => {
       const finddt = dt?.find((fd) => fd.name === name);
       if (finddt && finddt.password === password) {
         localStorage.setItem("Login_user", JSON.stringify(finddt));
-        navigate("/Myform");
+        navigate("/dashboard");
       } else {
         alert("Invalid Credentials");
       }
