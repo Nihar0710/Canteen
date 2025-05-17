@@ -1,24 +1,30 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Make sure you have react-router-dom installed
+import { useNavigate } from "react-router-dom";
 
 function MyForm() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Add any logout logic (e.g., clearing session)
-    navigate("/"); // Redirect to login page
+    navigate("/");
   };
 
   return (
     <div style={styles.wrapper}>
       {/* Sidebar */}
       <div style={styles.sidebar}>
-      <img
-        src={require("../pic1.png")}
-        alt="EcoFood Logo"
-        style={{ width: "120px", marginBottom: "20px" }}
-      />
-       <h2 style={{ marginBottom: "20px" }}>Dashboard</h2>
+        <div>
+          <img
+            src={require("../pic1.png")}
+            alt="EcoFood Logo"
+            style={{ width: "120px", marginBottom: "20px" }}
+          />
+          <h2 style={{ marginBottom: "30px" }}>Dashboard</h2>
+
+          <div className="sidebar-item">Cart</div>
+          <div className="sidebar-item">Past Orders</div>
+          <div className="sidebar-item">Track Order</div>
+        </div>
+
         <button onClick={handleLogout} style={styles.logoutButton}>
           Logout
         </button>
@@ -29,10 +35,10 @@ function MyForm() {
         <header style={styles.header}>
           <h1 style={styles.logo}>EcoFood Canteen</h1>
           <nav style={styles.navbar}>
-            <a href="#home" style={styles.navItem}>Home</a>
-            <a href="#menu" style={styles.navItem}>Menu</a>
-            <a href="#about" style={styles.navItem}>About</a>
-            <a href="#contact" style={styles.navItem}>Contact</a>
+            <a href="#home" className="nav-item">Home</a>
+            <a href="#menu" className="nav-item">Menu</a>
+            <a href="#about" className="nav-item">About</a>
+            <a href="#contact" className="nav-item">Contact</a>
           </nav>
         </header>
 
@@ -51,9 +57,16 @@ function MyForm() {
         <section id="menu" style={styles.menuSection}>
           <h2>Our Menu</h2>
           <div style={styles.menuItems}>
-            <div style={styles.menuCard}>Veg Sandwich</div>
+            <div style={styles.menuCard}>Veg Sandwich (Indian)</div>
             <div style={styles.menuCard}>Fruit Salad</div>
             <div style={styles.menuCard}>Organic Juice</div>
+            <div style={styles.menuCard}>Pasta Alfredo (Italian)</div>
+            <div style={styles.menuCard}>Tacos (Mexican)</div>
+            <div style={styles.menuCard}>Fried Rice (Chinese)</div>
+            <div style={styles.menuCard}>Falafel Wrap (Middle Eastern)</div>
+            <div style={styles.menuCard}>Sushi Rolls (Japanese)</div>
+            <div style={styles.menuCard}>Pad Thai (Thai)</div>
+            <div style={styles.menuCard}>Kimchi Bowl (Korean)</div>
           </div>
         </section>
 
@@ -61,6 +74,51 @@ function MyForm() {
           <p>&copy; 2025 EcoFood Canteen. All rights reserved.</p>
         </footer>
       </div>
+
+      {/* Hover styles for navbar and sidebar */}
+      <style>
+        {`
+          .nav-item {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
+          }
+
+          .nav-item:hover {
+            color: rgb(208, 43, 230);
+          }
+
+          .nav-item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background-color: rgb(208, 43, 230);
+            transition: width 0.3s ease;
+          }
+
+          .nav-item:hover::after {
+            width: 100%;
+          }
+
+          .sidebar-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #ffffff33;
+            cursor: pointer;
+            font-weight: bold;
+            transition: color 0.3s ease;
+          }
+
+          .sidebar-item:hover {
+            color:rgb(208, 43, 230);
+          }
+        `}
+      </style>
     </div>
   );
 }
@@ -80,7 +138,7 @@ const styles = {
     justifyContent: "space-between",
   },
   logoutButton: {
-    marginTop: "auto",
+    marginTop: "20px",
     padding: "10px",
     backgroundColor: "#ff4d4d",
     color: "white",
@@ -109,11 +167,6 @@ const styles = {
     display: "flex",
     gap: "20px",
   },
-  navItem: {
-    color: "white",
-    textDecoration: "none",
-    fontWeight: "bold",
-  },
   heroSection: {
     display: "flex",
     justifyContent: "space-between",
@@ -134,6 +187,7 @@ const styles = {
   },
   menuItems: {
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "center",
     gap: "20px",
     marginTop: "20px",
