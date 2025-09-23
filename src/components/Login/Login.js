@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { data, Route, useNavigate } from "react-router-dom";
 import { FaUser, FaLock } from "react-icons/fa";
-import logo from '../../pic1.png';
+import logo from '../../Projectlogo.jpeg';
 import  Login  from "../Login/Login.css";
 
 const Log = () => {

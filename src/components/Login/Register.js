@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from '../../pic1.png';
+import logo from '../../Projectlogo.jpeg';
 import  Login  from "../Login/Login.css";
 
 const Register = () => {

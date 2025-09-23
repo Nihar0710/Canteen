@@ -14,7 +14,7 @@ function MyForm() {
       <div style={styles.sidebar}>
         <div>
           <img
-            src={require("../pic1.png")}
+            src={require("../Projectlogo.jpeg")}
             alt="EcoFood Logo"
             style={{ width: "120px", marginBottom: "20px" }}
           />
@@ -48,7 +48,7 @@ function MyForm() {
             <p>Healthy. Fresh. Sustainable.</p>
           </div>
           <img
-            src={require("../pic1.png")}
+            src={require("../Projectlogo.jpeg")}
             alt="EcoFood"
             style={styles.heroImage}
           />
