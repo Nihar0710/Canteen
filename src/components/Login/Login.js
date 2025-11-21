@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { data, Route, useNavigate } from "react-router-dom";
 import { FaUser, FaLock } from "react-icons/fa";
-import logo from '../../Projectlogo.jpeg';
+import logo from '../../Projectlogo.jpg';
 import  Login  from "../Login/Login.css";
 
 const Log = () => {
@@ -20,9 +20,9 @@ const Log = () => {
       }
     };
   
-    return (
-  <div className="d-flex justify-content-center align-items-center vh-100" style={{ backgroundColor: '#f4a9a3' }}>
-      <div className="d-flex p-4 shadow-lg rounded" style={{ backgroundColor: '#f7b3ae', borderRadius: '15px' }}>
+      return (
+      <div className="d-flex justify-content-center align-items-center vh-100" style={{ backgroundColor: '#e8f5e9' }}>
+        <div className="d-flex p-4 shadow-lg rounded" style={{ backgroundColor: '#f1f8e9', borderRadius: '15px' }}>
       <div className="p-4" style={{ minWidth: '300px' }}>
             <h2 className="login-title">Login</h2>
             <p className="login-subtitle">Sign In to your account</p>

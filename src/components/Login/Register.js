@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from '../../Projectlogo.jpeg';
+import logo from '../../Projectlogo.jpg';
 import  Login  from "../Login/Login.css";
 
 const Register = () => {
@@ -33,11 +33,11 @@ const Register = () => {
   };
 
   return (
-<div className="d-flex justify-content-center align-items-center vh-100" style={{ backgroundColor: '#f4a9a3' }}>
-    <div className="d-flex p-4 shadow-lg rounded" style={{ backgroundColor: '#f7b3ae', borderRadius: '15px' }}>
+<div className="d-flex justify-content-center align-items-center vh-100" style={{ backgroundColor: '#e8f5e9' }}>
+    <div className="d-flex p-4 shadow-lg rounded" style={{ backgroundColor: '#f1f8e9', borderRadius: '15px' }}>
         <div className="p-4" style={{ minWidth: '300px' }}>
-          <h2 style={{ fontWeight: 'bold', color: '#800000' }}>Register</h2>
-          <p className="mb-4" style={{ color: '#5a2d2d' }}>Create your new account</p>
+        <h2 style={{ fontWeight: 'bold', color: '#558b2f' }}>Register</h2>
+        <p className="mb-4" style={{ color: '#6cb342' }}>Create your new account</p>
 
           <input
             onChange={(event) => setname(event.target.value)}
@@ -54,10 +54,10 @@ const Register = () => {
           />
 
           <div className="col-md-4 d-flex">
-            <button onClick={savedata} className="btn" style={{ backgroundColor: '#8B0000', color: 'white', fontWeight: 'bold' }}>
-              Register
-            </button>
-            <button onClick={() => navigate('/')} className="btn btn-Login mx-2" style={{ backgroundColor: '#8B0000', color: 'white', fontWeight: 'bold' }}>
+          <button onClick={savedata} className="btn" style={{ backgroundColor: '#558b2f', color: 'white', fontWeight: 'bold' }}>
+            Register
+          </button>
+          <button onClick={() => navigate('/')} className="btn btn-Login mx-2" style={{ backgroundColor: '#558b2f', color: 'white', fontWeight: 'bold' }}>
               Login
             </button>
           </div>
