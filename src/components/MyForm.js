@@ -156,7 +156,7 @@ function MyForm() {
         </footer>
       </div>
 
-      {/* Hover styles for navbar and sidebar */}
+      
       <style>
         {`
           .nav-item {
