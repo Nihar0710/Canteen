@@ -10,7 +10,6 @@ function MyForm() {
     navigate("/");
   };
 
-  // Mock meal data
   const meals = [
     { id: 1, name: "Paneer Butter Masala", category: "Indian", price: 120, rating: 4.5, time: "25-30 min", isSpecial: true, image: "https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Paneer+Butter+Masala" },
     { id: 2, name: "Butter Chicken", category: "Indian", price: 130, rating: 4.7, time: "25-30 min", isSpecial: true, image: "https://via.placeholder.com/300x200/FFA500/FFFFFF?text=Butter+Chicken" },
@@ -35,7 +34,6 @@ function MyForm() {
 
   return (
     <div style={styles.wrapper}>
-      {/* Sidebar */}
       <div style={styles.sidebar}>
         <div>
           <img
@@ -55,7 +53,6 @@ function MyForm() {
         </button>
       </div>
 
-      {/* Main Content */}
       <div style={styles.pageContainer}>
         <header style={styles.header}>
           <nav style={styles.navbar}>
@@ -83,7 +80,6 @@ function MyForm() {
           </div>
         </section>
 
-        {/* Today's Specials */}
         <section style={styles.specialsSection}>
           <h2 style={{margin: "0 0 16px"}}>🔥 Today's Specials</h2>
           <div style={styles.specialsGrid}>
@@ -102,7 +98,6 @@ function MyForm() {
           </div>
         </section>
 
-        {/* Categories */}
         <section style={styles.categoriesSection}>
           <h2 style={{margin: "0 0 16px"}}>Browse Categories</h2>
           <div style={styles.categoryScroll}>
@@ -123,7 +118,6 @@ function MyForm() {
           </div>
         </section>
 
-        {/* Filtered Meals */}
         <section style={styles.mealsSection}>
           <h2 style={{margin: "0 0 16px"}}>
             {activeCategory === "All" ? "All Meals" : activeCategory}
