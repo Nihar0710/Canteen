@@ -117,7 +117,7 @@ function MyForm() {
             ))}
           </div>
         </section>
-            
+            //Meals Section
         <section style={styles.mealsSection}>
           <h2 style={{margin: "0 0 16px"}}>
             {activeCategory === "All" ? "All Meals" : activeCategory}
